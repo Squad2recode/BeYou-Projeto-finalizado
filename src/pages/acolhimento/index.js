@@ -24,7 +24,7 @@ class Acolhimento extends Component {
                 </Link>
                 <Link to="/acolhimento/encontre-uma-casa">
                   <button type="button" className="btn btn-secondary btn__acolimento__opcao">
-                    Casas de acolhimento
+                    Casas
                   </button>
                 </Link>
               </div>
@@ -41,7 +41,7 @@ class Acolhimento extends Component {
                 </Link>
                 <Link to="/acolhimento/indique-uma-casa">
                   <button type="button" className="btn btn-secondary btn__acolimento__opcao">
-                    Indique uma Casa
+                    Indique
                   </button>
                 </Link>
               </div>

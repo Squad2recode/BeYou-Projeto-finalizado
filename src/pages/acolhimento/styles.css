@@ -31,12 +31,18 @@
   }
   
   .btn__acolimento__opcao {
-    width: 20vw;
+    width: 22vw;
     height: 5vh;
     font-size: 0.6em !important;
     line-height: 0px;
     text-transform: uppercase;
-    letter-spacing: 0.3em;
     transition: all 0.5s ease;
     margin-bottom: 5vh;
+  }
+
+  @media screen and (max-width: 850px) {
+    .opcoes {
+      display: flex;
+      flex-direction: column;
+    }
   }

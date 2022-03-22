@@ -138,12 +138,18 @@
 
   @media screen and (max-width: 599px) {
 
+    .banner img{
+      height: 20vh;
+    }
+
+    .container-2 {
+      margin-right: 15vw;
+    }
+
       .banner-2 {
       margin-top: -10vh;
       display: flex;
       flex-direction: column;
-      margin-left: auto !important;
-      margin-right: auto !important;
     }
 
     .banner-2 img {
