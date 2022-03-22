@@ -1,0 +1,51 @@
+.card {
+  margin-top: 25%;
+  margin-bottom: 5%;
+}
+
+.table__cursos {
+  margin-top: 30vh;
+  margin-bottom: 60vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  text-align: center;
+}
+
+td {
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.btn__funcoes {
+  width: 3vw !important;
+  margin-left: 0.5em;
+}
+
+.btn__color-delete {
+  background-color: rgba(255, 0, 0, 0.384);
+}
+
+.btn__color-edit {
+  background-color: rgba(0, 140, 255, 0.377);
+}
+
+@media screen and (max-width: 850px) {
+  .table__cursos {
+    margin-top: 20vh;
+    margin-bottom: 50vh !important;
+    vertical-align: middle;
+    z-index: 2;
+  }
+
+  .table th {
+    vertical-align: middle;
+  }
+
+  .fim img {
+    width: 10vw;
+  }
+  .overflow {
+    overflow: scroll;
+  }
+}

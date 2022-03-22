@@ -1,0 +1,42 @@
+.menu ul li {
+    font-weight: bold;
+  }
+  
+  .opcoes {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-bottom: 25vh;
+  }
+  
+  .opcoes img {
+    align-items: center;
+    margin: 20px;
+    border-radius: 10%;    
+    box-shadow: 0 0 5px #000;
+    transition: all 0.5s ease;
+  }
+
+  .opcoes img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  .opcoes a {
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: 140px;
+  }
+  
+  .btn__acolimento__opcao {
+    width: 20vw;
+    height: 5vh;
+    font-size: 0.6em !important;
+    line-height: 0px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    transition: all 0.5s ease;
+    margin-bottom: 5vh;
+  }
