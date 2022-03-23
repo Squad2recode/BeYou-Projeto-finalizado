@@ -24,7 +24,7 @@ const VagasIndicadas = () => {
   };
 
   const deleteEmprego = (empregoId) => {
-    EmpregosService.deleteEmpregos(casasId).then((response) => {
+    EmpregosService.deleteEmpregos(empregoId).then((response) => {
       getTodosOsEmpregos();
     }).catch(error => {
       console.log(error);
