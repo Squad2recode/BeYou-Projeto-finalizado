@@ -23,6 +23,14 @@ const VagasIndicadas = () => {
       });
   };
 
+  const deleteEmprego = (empregoId) => {
+    EmpregosService.deleteEmpregos(casasId).then((response) => {
+      getTodosOsEmpregos();
+    }).catch(error => {
+      console.log(error);
+    })
+  }
+
   return (
     <>
       <main>
@@ -52,7 +60,7 @@ const VagasIndicadas = () => {
                         <Link to={`/admin/editar-vaga/${emprego.id}`} className="btn btn-info btn__funcoes btn__color-edit">
                           <img src={Edit} alt="icone de editar"></img>
                         </Link>
-                        <button className="btn btn-danger btn__funcoes btn__color-delete">
+                        <button className="btn btn-danger btn__funcoes btn__color-delete" onClick={() => deleteEmprego(emprego.id)}>
                           <img src={Delete} alt="icone de deletar" ></img>
                         </button>
                       </td>
