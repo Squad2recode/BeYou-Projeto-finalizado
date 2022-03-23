@@ -151,6 +151,12 @@ export default () => {
       </Switch>
 
       <Switch>
+        <Route exact path="/admin/editar-vaga/:id">
+          <CadastrarVagas/>
+        </Route>
+      </Switch>
+
+      <Switch>
         <Route exact path="/admin/ver-cursos-indicados">
           <CursosIndicados />
         </Route>

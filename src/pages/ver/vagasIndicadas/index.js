@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
-import ParceirosService from "../../../services/ParceirosService";
 import "./style.css";
 import Delete from "../../../assets/img/delete-icon.svg";
 import Edit from "../../../assets/img/edit-icon.svg";
+import EmpregosService from "../../../services/EmpregosService";
+import { Link } from "react-router-dom";
 
 const VagasIndicadas = () => {
-  const [parceiros, setParceiros] = useState([]);
+  const [empregos, setEmpregos] = useState([]);
 
   useEffect(() => {
-    getTodosOsParceiros();
+    getTodosOsEmpregos();
   }, []);
 
-  const getTodosOsParceiros = () => {
-    ParceirosService.getAllParceiros()
+  const getTodosOsEmpregos = () => {
+    EmpregosService.getAllEmpregos()
       .then((response) => {
-        setParceiros(response.data);
+        setEmpregos(response.data);
         console.log(response.data);
       })
       .catch((error) => {
@@ -38,21 +39,27 @@ const VagasIndicadas = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Parceiro 1</td>
-                <td>fake@falso.com</td>
-                <td>Telefone</td>
-                <td>bdusbabudbfyabubsdbcc</td>
-                <td>sasuahshaushauhsaus</td>
-                <td>
-                  <button className="btn btn-info btn__funcoes btn__color-edit">
-                    <img src={Edit}></img>
-                  </button>
-                  <button className="btn btn-danger btn__funcoes btn__color-delete">
-                    <img src={Delete}></img>
-                  </button>
-                </td>
-              </tr>
+              {
+                empregos.map(
+                  emprego =>
+                    <tr key={emprego.id}>
+                      <td> {emprego.nomeEmpresa} </td>
+                      <td> {emprego.cargo} </td>
+                      <td> {emprego.estadoCidade} </td>
+                      <td> {emprego.salario} </td>
+                      <td> {emprego.beneficios} </td>
+                      <td>
+                        <Link to={`/admin/editar-vaga/${emprego.id}`} className="btn btn-info btn__funcoes btn__color-edit">
+                          <img src={Edit} alt="icone de editar"></img>
+                        </Link>
+                        <button className="btn btn-danger btn__funcoes btn__color-delete">
+                          <img src={Delete} alt="icone de deletar" ></img>
+                        </button>
+                      </td>
+                    </tr>
+                )
+              }
+
             </tbody>
           </table>
         </section>

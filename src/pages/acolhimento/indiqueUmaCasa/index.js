@@ -29,7 +29,7 @@ const IndiqueUmaCasa = () => {
       CasasAcolhimentoService.createCasa(casa).then((response) => {
         console.log(response.data);
         alert("Casa de Acolhimento cadastrada com sucesso!")
-        history.push("/acolhimento")
+        history.push("/")
       }).catch(error => {
         console.log(error);
       })

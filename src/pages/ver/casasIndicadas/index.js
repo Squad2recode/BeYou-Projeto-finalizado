@@ -56,9 +56,9 @@ const CasasIndicadas = () => {
                       <td> {casa.estado} </td>
                       <td> {casa.cidade} </td>
                       <td>
-                        <Link className="btn btn-info btn__funcoes btn__color-edit" to={`/acolhimento/editar-casa/${casa.id}`}><img src={Edit}></img></Link>
+                        <Link className="btn btn-info btn__funcoes btn__color-edit" to={`/acolhimento/editar-casa/${casa.id}`}><img src={Edit} alt="icone de editar"></img></Link>
                         <button className='btn btn-danger btn__funcoes btn__color-delete' onClick={() => deleteCasa(casa.id)}
-                        ><img src={Delete}></img></button>
+                        ><img src={Delete} alt="icone de deletar"></img></button>
                       </td>
                     </tr>
                 )

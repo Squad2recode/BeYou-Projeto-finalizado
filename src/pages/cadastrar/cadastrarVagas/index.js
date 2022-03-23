@@ -14,13 +14,6 @@ const CadastrarVagas = () => {
   const history = useHistory();
   const { id } = useParams();
 
-  const recarregar = () =>{
-    setNomeEmpresa('')
-    setCargo('')
-    setEstadoCidade('')
-    setSalario('')
-    setBeneficios('')
-  }
 
   const saveOrUpdateEmprego = (e) => {
     e.preventDefault();
@@ -30,6 +23,7 @@ const CadastrarVagas = () => {
     if (id) {
       EmpregosService.updateEmpregos(id, emprego).then((response) => {
         alert("Informações atualizadas!")
+        history.push("/admin/ver-vagas-indicadas")
       }).catch(error => {
         console.log(error);
       })
